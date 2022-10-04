@@ -2,7 +2,7 @@
 
 
 
-<img src="public/img/logo.png" alt="logo" style="zoom:25%;" />
+<img src="public/img/logo.png" alt="logo" style="width:25%;" />
 
 # 萌狼随笔 <small>22.10.04</small>
 
