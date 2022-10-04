@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project version="4">
-  <component name="JavaScriptLibraryMappings">
-    <file url="PROJECT" libraries="{docsify, docsify-copy-code, docsify-count, docsify-pagination, docsify-plugin-toc, docsify-sidebar-collapse, docsify-tabs, emoji, prism-bash, prism-cmake, prism-csharp, prism-docker, prism-java, prism-powershell, prism-python, sidebar-folder, vue}" />
-  </component>
-</project>

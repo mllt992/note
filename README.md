@@ -1,4 +1,3 @@
-- [.idea](.idea/)
 - [public](public/)
   - [img](public/img/)
 - [知识](知识/)
@@ -12,3 +11,5 @@
     - [index](知识/计算机/index.md)
 - [随笔](随笔/)
   - [20221004](随笔/20221004.md)
+- [_coverpage](_coverpage.md)
+- [首页](首页.md)
