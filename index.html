@@ -18,6 +18,30 @@
 <!--  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.css">-->
   <!-- 右侧目录 -->
   <!-- <link rel="stylesheet" href="https://unpkg.com/docsify-toc@1.0.0/dist/toc.css"> -->
+  <style>
+    @media (min-width: 375px) {
+      .mlvideo{
+          height: 150px;
+      }
+    }
+    @media (min-width: 480px) {
+      .mlvideo{
+        height: 250px;
+      }
+    }
+    /*@media (max-width: 720px){*/
+    /*  .mlvideo{*/
+    /*    height: 350px;*/
+    /*  }*/
+    /*}*/
+    @media (min-width: 720px){
+      .mlvideo{
+        height:450px;
+      }
+    }
+
+
+  </style>
 </head>
 
 <body>
@@ -52,7 +76,7 @@
       // ----------------------------------------------------------------
       // 页面右侧toc
       toc: {
-        tocMaxLevel: 2,
+        tocMaxLevel: 5,
         target: "h2, h3, h4, h5",
       },
 
