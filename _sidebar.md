@@ -1,15 +1,15 @@
 - [首页](/首页.md)
-- 知识
-	- 数学
+- [知识](/知识/_index)
+	- [数学](/知识/数学/_index)
 		- [index.md](/知识/数学/index.md)
 		- [README.md](/知识/数学/README.md)
-	- 英语
+	- [英语](/知识/英语/_index)
 		- [index.md](/知识/英语/index.md)
 		- [README.md](/知识/英语/README.md)
 		- [基础语法.md](/知识/英语/基础语法.md)
-	- 计算机
+	- [计算机](/知识/计算机/_index)
 		- [07.md](/知识/计算机/07.md)
 		- [index.md](/知识/计算机/index.md)
 		- [README.md](/知识/计算机/README.md)
-- 随笔
+- [随笔](/随笔/_index)
 	- [20221004.md](/随笔/20221004.md)
