@@ -4,5 +4,27 @@
     <content url="file://$MODULE_DIR$" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="vue" level="application" />
+    <orderEntry type="library" name="sidebar-folder" level="application" />
+    <orderEntry type="library" name="docsify-changelog-plugin" level="application" />
+    <orderEntry type="library" name="docsify-slides" level="application" />
+    <orderEntry type="library" name="docsify-pdf-embed" level="application" />
+    <orderEntry type="library" name="index" level="application" />
+    <orderEntry type="library" name="docsify-remote-markdown" level="application" />
+    <orderEntry type="library" name="countable" level="application" />
+    <orderEntry type="library" name="zoom-image" level="application" />
+    <orderEntry type="library" name="search" level="application" />
+    <orderEntry type="library" name="external-script" level="application" />
+    <orderEntry type="library" name="ga" level="application" />
+    <orderEntry type="library" name="docsify-changelog-plugin" level="application" />
+    <orderEntry type="library" name="docsify-slides" level="application" />
+    <orderEntry type="library" name="docsify-pdf-embed" level="application" />
+    <orderEntry type="library" name="docsify-remote-markdown" level="application" />
+    <orderEntry type="library" name="highlight" level="application" />
+    <orderEntry type="library" name="tomorrow-night-bright" level="application" />
+    <orderEntry type="library" name="docsify-sidebarFooter" level="application" />
+    <orderEntry type="library" name="light" level="application" />
+    <orderEntry type="library" name="sidebar" level="application" />
+    <orderEntry type="library" name="buble" level="application" />
   </component>
 </module>
