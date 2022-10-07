@@ -11,8 +11,16 @@
 </style>
 
 
-
 # 更新日志
+
+
+
+<div class="log-title">2022年10月8日</div>
+
+- [x] 优化gittalk评论插件配置
+- [x] 更新文章：docsify+gittalk搭建与配置过程分享
+
+
 
 <div class="log-title">2022年10月7日</div>
 
