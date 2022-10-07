@@ -26,5 +26,6 @@
     <orderEntry type="library" name="light" level="application" />
     <orderEntry type="library" name="sidebar" level="application" />
     <orderEntry type="library" name="buble" level="application" />
+    <orderEntry type="library" name="gitalk" level="application" />
   </component>
 </module>

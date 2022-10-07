@@ -21,6 +21,14 @@
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar.min.css"/>
     <!-- 右侧TOC-->
     <link rel="stylesheet" href="public/css/toc.css">
+
+<!--    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-changelog-plugin@latest/dist/style.css" />-->
+<!--    评论-->
+<!--    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />-->
+<!--    <link rel="stylesheet" href="https://unpkg.com/browse/gitalk@1.7.2/dist/gitalk.css">-->
+<!--    <link href="https://cdn.bootcdn.net/ajax/libs/gitalk/1.8.0/gitalk.min.css" rel="stylesheet">-->
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
     <style>
         :root{
             --theme-color:#61649f;
@@ -177,14 +185,8 @@
 <!-- emoji -->
 <script src="//cdn.bootcdn.net/ajax/libs/docsify/4.12.2/plugins/emoji.min.js"></script>
 <!-- 评论 -->
-<!--<script src="https://cdn.bootcdn.net/ajax/libs/disqusjs/3.0.2/disqusjs.es2015.umd.min.js"></script>-->
-
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/gitalk.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-changelog-plugin@latest/dist/style.css" />
-  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
   <script>
-    var gitalk = new Gitalk({
+      var gitalk = new Gitalk({
       clientID: '0326d002698c5fbf352c',
       clientSecret: 'ecf2fe88e436498d940c33e12ec2a605e3a7b9b2',
       repo: 'note',
@@ -192,7 +194,7 @@
       admin: ['mllt992'],
        id: location.pathname,
         // facebook-like distraction free mode
-      distractionFreeMode: false
+      distractionFreeMode: false,
     })
   </script>
 
