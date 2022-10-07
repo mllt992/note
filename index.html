@@ -7,58 +7,71 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta charset="UTF-8"/>
+
     <!--    主题-->
     <!--  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/themes/vue.css" />-->
-<!--    <link href="//cdn.bootcdn.net/ajax/libs/docsify/4.12.2/themes/buble.min.css" rel="stylesheet">-->
+    <!--    <link href="//cdn.bootcdn.net/ajax/libs/docsify/4.12.2/themes/buble.min.css" rel="stylesheet">-->
     <!--  <link href="https://cdn.bootcdn.net/ajax/libs/docsify/4.12.2/themes/dolphin.min.css" rel="stylesheet">-->
     <!--  夜间模式-->
     <!--  <link href="https://cdn.bootcdn.net/ajax/libs/docsify/4.12.2/themes/dark.min.css" rel="stylesheet">-->
-      <link href="//cdn.bootcdn.net/ajax/libs/docsify/4.12.2/themes/vue.min.css" rel="stylesheet">
 
     <title>萌狼随笔</title>
-
+    <link href="//cdn.bootcdn.net/ajax/libs/docsify/4.12.2/themes/vue.min.css" rel="stylesheet">
+<script src="https://unpkg.com/browse/jquery@3.3.1/dist/jquery.min.js"></script>
     <!-- 箭头样式 -->
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar.min.css"/>
     <!-- 右侧TOC-->
     <link rel="stylesheet" href="public/css/toc.css">
+    <!-- 评论-->
+    <link rel="stylesheet" href="//unpkg.com/gitalk/dist/gitalk.css">
+        <script src="//unpkg.com/docsify/lib/plugins/gitalk.min.js"></script>
+        <script src="//unpkg.com/gitalk/dist/gitalk.min.js"></script>
 
-<!--    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-changelog-plugin@latest/dist/style.css" />-->
-<!--    评论-->
-<!--    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />-->
-<!--    <link rel="stylesheet" href="https://unpkg.com/browse/gitalk@1.7.2/dist/gitalk.css">-->
-<!--    <link href="https://cdn.bootcdn.net/ajax/libs/gitalk/1.8.0/gitalk.min.css" rel="stylesheet">-->
-    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
-    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+
+
+<!--    日志-->
+    <!--    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-changelog-plugin@latest/dist/style.css" />-->
+    <link
+            rel="stylesheet"
+            href="//cdn.jsdelivr.net/npm/docsify-changelog-plugin@latest/dist/style.css"
+    />
+<!--    <link-->
+<!--            rel="stylesheet"-->
+<!--            href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"-->
+<!--    />-->
     <style>
-        :root{
-            --theme-color:#61649f;
+        :root {
+            --theme-color: #61649f;
         }
+        /*解决引入的外部视频显示尺寸问题*/
         @media (min-width: 375px) {
             .mlvideo {
                 height: 150px;
             }
         }
-
         @media (min-width: 480px) {
             .mlvideo {
                 height: 250px;
             }
         }
-
         @media (min-width: 720px) {
             .mlvideo {
                 height: 450px;
             }
         }
-
-
+        /*解决gittalk和上下篇文章切换插件冲突的问题*/
+        .gt-container{
+            margin:4em auto ;
+            width: 95%;
+        }
     </style>
 </head>
 
 <body>
 <nav></nav>
 <div id="app">Loading...</div>
-
+<!--<div id="gitalk-container"></div>-->
 
 <script>
     window.$docsify = {
@@ -107,20 +120,20 @@
             crossChapterText: true,
         },
         // 字数统计
-        count: {
-            countable: true,
-            position: "top",
-            margin: "10px",
-            float: "right",
-            fontsize: "0.9em",
-            color: "var(--theme-color)",
-            language: "chinese",
-            localization: {
-                words: "",
-                minute: "",
-            },
-            isExpected: true,
-        },
+        // count: {
+        //     countable: true,
+        //     position: "top",
+        //     margin: "10px",
+        //     float: "right",
+        //     fontsize: "0.9em",
+        //     color: "var(--theme-color)",
+        //     language: "chinese",
+        //     localization: {
+        //         words: "",
+        //         minute: "",
+        //     },
+        //     isExpected: true,
+        // },
         // 更新记录
         loadNavbar: true, // IMPORTANT
         changelog: '_log.md', // path of your changelog, it can be remote as well
@@ -136,12 +149,31 @@
             tabComments: true,      // default
             tabHeadings: true       // default
         },
-        // 评论
-        disqus: 'shortname'
     };
 </script>
+<script>
+    window.onload = function () {
+        var gitalk = new Gitalk({
+            clientID: '0326d002698c5fbf352c',
+            clientSecret: 'ecf2fe88e436498d940c33e12ec2a605e3a7b9b2',
+            repo: 'note',
+            owner: 'mllt992',
+            admin: ['mllt992'],
+            id: location.pathname,
+            // facebook-like distraction free mode
+            distractionFreeMode: false,
+        })
+        var ele = document.getElementsByClassName('toc-nav')[0]
+        var newele = document.createElement('div')
+        newele.id="gitalk-container"
+        var cankao = document.getElementById('main')
+        ele.parentNode.insertBefore(newele, cankao.nextsibling)
+        ele.parentNode.insertBefore(newele, undefined)
+        gitalk.render("gitalk-container")
+    }
+</script>
 <!-- docsify -->
-<script src="//cdn.bootcdn.net/ajax/libs/docsify/4.12.2/docsify.js"></script>
+
 <!-- 代码高亮  https://cdn.jsdelivr.net/npm/prismjs@1/components/ -->
 <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
 <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-python.min.js"></script>
@@ -154,50 +186,28 @@
 <!-- 多tab支持 -->
 <script src="//cdn.jsdelivr.net/npm/docsify-tabs@1/dist/docsify-tabs.min.js"></script>
 
-    // <!-- 代码复制 -->
+// <!-- 代码复制 -->
 <script src="https://cdn.bootcdn.net/ajax/libs/docsify-copy-code/2.1.1/docsify-copy-code.js"></script>
 <!---->
 <!-- 底部 上一页下一页 -->
 <!--<script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>-->
 <script src="//cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
-
-
 <!--<script src="//cdn.jsdelivr.net/npm/docsify@4/lib/plugins/external-script.min.js"></script>-->
-
-
 <!-- 全文搜索 -->
 <!--<script src="//cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.js"></script>-->
 <script src="//cdn.bootcdn.net/ajax/libs/docsify/4.12.2/plugins/search.min.js"></script>
 <!-- 图片放大缩小 -->
 <!--<script src="//cdn.jsdelivr.net/npm/docsify@4/lib/plugins/zoom-image.min.js"></script>-->
 <script src="//cdn.bootcdn.net/ajax/libs/docsify/4.12.2/plugins/zoom-image.min.js"></script>
-
 <!-- 字数统计 -->
 <!-- <script src="https://cdn.jsdelivr.net/npm/docsify-count@latest/dist/countable.min.js"></script> -->
-<script src="//unpkg.com/docsify-count/dist/countable.min.js"></script>
-
+<!--<script src="//unpkg.com/docsify-count/dist/countable.min.js"></script>-->
 <!-- 侧边栏目录折叠 -->
 <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
-
 <!-- 页面右侧 TOC -->
 <script src="//unpkg.com/docsify-plugin-toc@1.3.1/dist/docsify-plugin-toc.min.js"></script>
-
 <!-- emoji -->
 <script src="//cdn.bootcdn.net/ajax/libs/docsify/4.12.2/plugins/emoji.min.js"></script>
-<!-- 评论 -->
-  <script>
-      var gitalk = new Gitalk({
-      clientID: '0326d002698c5fbf352c',
-      clientSecret: 'ecf2fe88e436498d940c33e12ec2a605e3a7b9b2',
-      repo: 'note',
-      owner: 'mllt992',
-      admin: ['mllt992'],
-       id: location.pathname,
-        // facebook-like distraction free mode
-      distractionFreeMode: false,
-    })
-  </script>
-
 
 <!-- 加载远程md文档 -->
 <script src="//unpkg.com/docsify-remote-markdown/dist/docsify-remote-markdown.min.js"></script>
@@ -208,6 +218,7 @@
 <!-- 更新记录 -->
 <script src="//cdn.jsdelivr.net/npm/docsify-changelog-plugin@latest/dist/index.js"></script>
 
+<script src="https://cdn.bootcdn.net/ajax/libs/docsify/4.12.2/docsify.min.js"></script>
 </body>
 
 </html>
