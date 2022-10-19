@@ -1,6 +1,5 @@
 - [首页](/首页.md)
 - 音视频
-		- [200.Auditon简单介绍.assets](/新媒体/音视频/200.Auditon简单介绍.assets/_index)
 		- [200.Auditon简单介绍](/新媒体/音视频/200.Auditon简单介绍.md)
 		- [201.Audition手动降噪](/新媒体/音视频/201.Audition手动降噪.md)
 		- [303.Pr文字工具常见基础操作](/新媒体/音视频/303.Pr文字工具常见基础操作.md)

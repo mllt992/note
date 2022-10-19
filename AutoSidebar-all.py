@@ -22,7 +22,7 @@ def getMD(path, tabs,text):
         if os.path.isdir(path_base + path + "/" + i):
             # print(i+"是文件夹")
             # 判断是不是隐藏文件夹，如果是隐藏文件夹则不添加路径
-            if i[0:1:1] != "." and i != "public":
+            if i[0:1:1] != "." and i != "public" and i[-6::1] != "assets":
                 # print(i+"符合要求")
                 text += tabs + "- [" + i +"]("+path_base[1:] + path + "/"+i+"/_index"+")"+ "\n"
                 content += tabs + "- [" + i + "](" + path_base[1:] + path + "/"+i+ "/_index" + ")" + "\n"
