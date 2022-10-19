@@ -31,7 +31,7 @@ def getMD(path, tabs,text):
         else:
             # print(i+"是文件")
             # 如果不是文件夹，判断是不是隐藏文件
-            if i[:1] != "." and i[:1] != "_" and i[-3::1] == ".md" and i[-6::1] != "assets":
+            if i[:1] != "." and i[:1] != "_" and i[-3::1] == ".md":
                 # print(i+"符合要求")
                 # i[:-3]是截取扩展名前面的部分，也就是不包括扩展名的文件名
                 text += tabs + "- [" + i[:-3] + "](" + path_base[1:] + path + "/" + i + ")" + "\n"
